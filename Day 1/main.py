@@ -67,9 +67,9 @@ def main():
             for val in numbers:
                 #If the line contains a number (string or int form)
                 #Use regex to find all overlapping entries
-                if line.find(str(val)) != -1:
-                    for i in findall(line, str(val)):
-                        digits[i] = convert_word_to_number(str(val))
+                if line.find(val) != -1:
+                    for i in findall(line, val):
+                        digits[i] = convert_word_to_number(val)
 
             #Sort digits by index value and then add the first and last
             sortedDigits = sorted(digits.items(), key=lambda t: t[0])
